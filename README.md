@@ -14,7 +14,7 @@ This plugin wraps [Aerys Bat's implementation](https://github.com/fish-shell/fis
 ## Install
 
 ```fish
-$ omf install !!
+$ omf install bang-bang 
 ```
 
 ## Usage
@@ -33,6 +33,15 @@ $ sudo !!
 $ mkdir /tmp/test
 $ cd !$
 ```
+
+## Troubleshooting
+
+If the keybindings fail to work after installing the plugin, the issue is 
+likely because of an existing `~/.config/fish/functions/fish_user_key_bindings.fish` 
+that is overiding the plugins.
+
+The solution is to either removing the exising file or to concat the contents of the 
+plugin `functions/fish_user_key_bindings.fish` file into it.
 
 # License
 

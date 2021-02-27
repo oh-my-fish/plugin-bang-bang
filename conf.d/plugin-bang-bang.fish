@@ -10,7 +10,5 @@ end
 function _plugin-bang-bang_uninstall --on-event plugin-bang-bang_uninstall
     bind --erase --all !
     bind --erase --all '$'
-    echo "plugin-bang-bang key bindings removed"
-
     functions --erase _plugin-bang-bang_uninstall
 end

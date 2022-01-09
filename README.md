@@ -24,7 +24,7 @@ $ omf install https://github.com/manos00/plugin-bang-bang
 ```fish
 $ cp ~/.dmrc 
 cp: missing destination file operand
-$ !! cp ~/.dmrc.bak
+$ !! ~/.dmrc.bak
 ```
 
 `!$` on command line will be replaced by last command arguments:

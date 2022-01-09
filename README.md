@@ -9,12 +9,12 @@
 
 <br/>
 
-This plugin wraps [Aerys Bat's implementation](https://github.com/fish-shell/fish-shell/wiki/Bash-Style-Command-Substitution-and-Chaining-(!!-!%24-&&-%7C%7C)) of bash style history substitution.
+This plugin wraps [Aerys Bat's implementation](https://github.com/fish-shell/fish-shell/wiki/Bash-Style-Command-Substitution-and-Chaining-(!!-!$)) of bash style history substitution.
 
 ## Install
 
 ```fish
-$ omf install bang-bang 
+$ omf install https://github.com/manos00/plugin-bang-bang 
 ```
 
 ## Usage
@@ -22,9 +22,9 @@ $ omf install bang-bang
 `!!` on command line will be replaced by last command issued:
 
 ```fish
-$ mv /etc/hostname /etc/hostname.old
-mv: rename /etc/hostname to /etc/hostname.old: Operation not permitted
-$ sudo !!
+$ cp ~/.dmrc 
+cp: missing destination file operand
+$ !! cp ~/.dmrc.bak
 ```
 
 `!$` on command line will be replaced by last command arguments:
@@ -32,6 +32,14 @@ $ sudo !!
 ```fish
 $ mkdir /tmp/test
 $ cd !$
+```
+
+`!S` on command line will be replaced by "sudo" plus last command:
+
+```fish
+$ mv /etc/hostname /etc/hostname.old
+mv: rename /etc/hostname to /etc/hostname.old: Operation not permitted
+$ !S
 ```
 
 ## Troubleshooting
@@ -45,13 +53,10 @@ plugin `functions/fish_user_key_bindings.fish` file into it.
 
 # License
 
-[MIT][mit] © [Aerys Bat][aerys-bat], [Derek Stavis][derekstavis] et [al][contributors]
+[MIT][mit] © [original creators][contributors] and [me][manos00]
 
 
 [mit]:            http://opensource.org/licenses/MIT
-[derekstavis]:    http://github.com/derek
-[aerys-bat]:      https://github.com/AerysBat
-[contributors]:   https://github.com/derek/plugin-bang-bang/graphs/contributors
+[manos00]:        https://github.com/manos00
+[contributors]:   https://github.com/oh-my-fish/plugin-bang-bang/graphs/contributors
 [omf-link]:       https://www.github.com/oh-my-fish/oh-my-fish
-
-[license-badge]:  https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square

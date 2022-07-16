@@ -9,7 +9,7 @@
 
 <br/>
 
-This plugin wraps [Aerys Bat's implementation](https://github.com/fish-shell/fish-shell/wiki/Bash-Style-Command-Substitution-and-Chaining-(!!-!%24-&&-%7C%7C)) of bash style history substitution.
+This plugin wraps [Aerys Bat's implementation](https://github.com/fish-shell/fish-shell/wiki/Bash-Style-Command-Substitution-and-Chaining-(!!-!$)) of bash style history substitution.
 
 ## Install
 

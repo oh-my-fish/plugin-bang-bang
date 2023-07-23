@@ -12,7 +12,7 @@ function _plugin-bang-bang_key_bindings --on-variable fish_key_bindings
 end
 
 function _plugin-bang-bang_uninstall --on-event plugin-bang-bang_uninstall
-    bind --erase '!'
+    bind --erase !
     bind --erase '$'
     functions --erase _plugin-bang-bang_uninstall
 end

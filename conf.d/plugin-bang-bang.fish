@@ -1,5 +1,5 @@
 function _plugin-bang-bang_key_bindings --on-variable fish_key_bindings
-    bind --erase '!'
+    bind --erase !
     bind --erase '$'
     switch "$fish_key_bindings"
     case 'fish_default_key_bindings'

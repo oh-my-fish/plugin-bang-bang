@@ -1,9 +1,9 @@
 function __history_previous_command_arguments
-  switch (commandline -t)
+  switch (commandline --current-token)[-1]
   case "!"
-    commandline -t ""
-    commandline -f history-token-search-backward
+    commandline --current-token ""
+    commandline --function history-token-search-backward
   case "*"
-    commandline -i '$'
+    commandline --insert '$'
   end
 end
